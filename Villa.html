@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .forcontact {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0px 50px;
+            gap: 60px;
+        }
+
+        .mail {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .material-icons {
+            color: orangered;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 50px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .alink {
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            gap: 5px;
+            padding: 0% 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black
+        }
+
+        a:hover {
+            color: orangered;
+        }
+
+        .imgtext {
+            position: absolute;
+            font-size: x-large;
+            padding-left: 100px;
+        }
+
+        .font {
+            display: flex;
+            font-size: large;
+            color: orangered;
+            font-weight: bold;
+        }
+
+        .black-font {
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+
+        .grey-box {
+            height: 190px;
+            width: 300px;
+            background-color: whitesmoke;
+            padding: 10px;
+
+        }
+
+        .content {
+            width: 270px;
+            font-size: small;
+        }
+
+        .white {
+            display: flex;
+            height: 290px;
+            width: 200px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .video {
+            background-image: url(https://thumbs.dreamstime.com/z/luxury-modern-house-swimming-pool-interior-exterior-luxury-house-swimming-pool-interior-exterior-135573030.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 140px 0px 250px 0px;
+            position: relative;
+            background-color: #000;
+
+        }
+
+        .video {
+            opacity: 0.2;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 230px;
+            height: 200px;
+        }
+
+        .orange {
+            height: 50px;
+            width: 150px;
+            background-color: rgb(248, 228, 221);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            border: 1px solid rgb(248, 228, 221);
+            border-radius: 5px;
+        }
+
+        .number {
+            font-size: x-large;
+            color: orangered;
+        }
+
+        .info {
+            font-size: x-small;
+            width: 80px;
+        }
+
+        .round {
+            background-color: orangered;
+            height: 30px;
+            border-radius: 50px 50px 50px 50px;
+            width: 30px;
+            position: relative;
+            left: 90px;
+            top: -90px;
+        }
+
+        .whitesmoke {
+            height: 800px;
+            width: auto;
+            background-color: whitesmoke;
+            padding: 50px;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            position: relative;
+            top: -40px;
+            float: right;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+            background-color: #000;
+            color: white;
+        }
+
+        button:hover {
+            background-color: orangered;
+        }
+
+        .grey {
+            color: rgb(184, 183, 183);
+
+        }
+
+        .black {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .whitesmoke-content {
+            justify-content: space-between;
+            flex-direction: row;
+            display: flex;
+
+        }
+
+        .whitesmoke-img {
+            height: 580px;
+            width: 450px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+        }
+
+        .grey2 {
+            color: grey;
+
+        }
+
+        .black2 {
+            color: #000;
+        }
+
+        .video2 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTAHjjlnFHnnrp35KSve9XtweDp6OxzPXR_A&s);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 140px 0px 250px 0px;
+            position: relative;
+            background-color: #000;
+
+        }
+
+        .video2 {
+            opacity: 0.2;
+        }
+
+        .label {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        input,
+        textarea {
+            border: 1px solid whitesmoke;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            height: 30px;
+            padding-left: 10px;
+        }
+
+        button {
+            background-color: #000;
+            height: 30px;
+            width: 130px;
+            text-align: center;
+            border: 1 px solid black;
+            border-radius: 20px;
+
+        }
+        .footer{
+            height: 80px;
+            width: 250px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Page 1 -->
+    <div class="forcontact">
+        <div style="display: flex;flex-direction: row;gap:20px">
+            <div class="mail">
+                <i class="material-icons">mail</i>
+                <div>info@company.com</div>
+            </div>
+            <div class="mail">
+                <i class="material-icons">waves</i>
+                <div>Sunny Isles Beach,FL 33160</div>
+            </div>
+        </div>
+        <div style="display: flex;flex-direction: row;gap:10px">
+            <div class="mail">
+                <i class="fa fa-facebook-square" style="font-size:20px ;"></i>
+            </div>
+            <div class="mail">
+                <i class="fa fa-twitter-square" style="font-size: 20px;"></i>
+
+            </div>
+            <div class="mail">
+                <i class="fa fa-linkedin-square" style="font-size:20px"></i>
+            </div>
+            <div class="mail">
+                <i class="fa fa-instagram" style="font-size:20px"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <hr color="grey">
+
+    <div class="header">
+        <div style="font-size: larger; font-weight: bold;">
+            VILLA
+        </div>
+        <div class="nav">
+            <nav>
+                <a href="##">Home</a>
+                <a href="##">Properties</a>
+                <a href="##">Property Details</a>
+                <a href="##">Contact Us</a>
+                <a href="##" class="alink"><i class="material-icons">tour</i>Sadual a visit</a>
+            </nav>
+        </div>
+    </div>
+
+    <div style="display: flex; align-items: center;">
+        <img
+            src="https://www.indextap.com/blog/wp-content/uploads/2022/11/stephen-leonardi-XKIO6ZgCObo-unsplash-1536x1024.jpg">
+        <div class="imgtext">
+            <div
+                style="align-items: center; justify-content: center;display: flex; background-color: white; height: 50px; width: 200px;">
+                Tornto,Canada
+            </div>
+            <div
+                style="font-size:80px;font-family: Verdana, Geneva, Tahoma, sans-serif; color: white;font-weight: bold;">
+                HURRY!<br>GET THE BEST<br>VILLA FOR YOU
+            </div>
+        </div>
+    </div>
+
+    <!-- page 2 -->
+    <div class="forcontact" style="padding: 100px 100px 0px 100px;">
+        <div>
+            <img src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/featured.jpg"
+                height="450px;">
+            <a href="#">
+                <i class="material-icons"
+                    style="font-size:80px; background-color: rgb(175, 170, 170); border-radius: 80px 80px; position: absolute; left: 70px;bottom: -978px;">
+                    house_siding
+                </i>
+            </a>
+        </div>
+
+        <div style="display: flex;flex-direction: column;gap: 20px;">
+            <div class="font">
+                FEATURED
+            </div>
+            <div class="black-font">
+                Best<br>Appartment &<br>Sea View
+            </div>
+            <div class="grey-box">
+                <div class="font">
+                    Best useful links?
+                </div>
+                <hr>
+                <div class="content">
+                    Get <b>the best villa</b> website template in HTML CSS and Bootstrap for your business.TemplateMo
+                    provides you the best free CSS template in the world.please tell tour friends about it.
+                    <br><br>
+                    How does this work?
+                </div>
+                <hr>
+                <div class="content">
+                    Why is Villa Agency the best
+                </div>
+
+            </div>
+        </div>
+
+        <div class="white">
+            <div style="display: flex;flex-direction: column;gap: 30px;">
+
+                <!-- 1st icon -->
+                <div style="display: flex;flex-direction: row;gap: 10px;">
+                    <i class="material-icons" style="font-size:50px;">space_dashboard</i>
+                    <div style="display: flex;flex-direction: column;gap:8px;">
+                        <div style="font-size:medium; font-weight: bold;">
+                            250m2
+                        </div>
+                        <div style="color: grey; font-size: smaller;">
+                            Total Flate Space
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 icon -->
+                <div style="display: flex;flex-direction: row;gap: 10px;">
+                    <i class="material-icons" style="font-size:50px;">gavel</i>
+                    <div style="display: flex;flex-direction: column;gap:8px;">
+                        <div style="font-size:medium; font-weight: bold;">
+                            Contract
+                        </div>
+                        <div style="color: grey; font-size: smaller;">
+                            Contract Ready
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 icon -->
+                <div style="display: flex;flex-direction: row;gap: 10px;">
+                    <i class="material-icons" style="font-size:50px;">payments</i>
+                    <div style="display: flex;flex-direction: column;gap:8px;">
+                        <div style="font-size:medium; font-weight: bold;">
+                            Payment
+                        </div>
+                        <div style="color: grey; font-size: smaller;">
+                            Payment Process
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 icon -->
+                <div style="display: flex;flex-direction: row;gap: 10px;">
+                    <i class="material-icons" style="font-size:50px;"> safety_check</i>
+                    <div style="display: flex;flex-direction: column;gap:8px;">
+                        <div style="font-size:medium; font-weight: bold;">
+                            Safety
+                        </div>
+                        <div style="color: grey; font-size: smaller;">
+                            24/7 Under Control
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- page 3 -->
+    <div style="display: flex;flex-direction: column;gap:0px;">
+        <div>
+            <div class="font"
+                style="display: flex;position: relative;justify-content: center;bottom: -100px ;font-size: smaller;">
+                VIDEO VIEW
+            </div>
+            <div class="black-font"
+                style="display: flex;color: black;position: relative;justify-content: center;bottom: -120px;font-size:x-large;">
+                Get Closer View &<br>Different Feeling
+            </div>
+        </div>
+
+        <div class="video">
+        </div>
+
+        <div class="image-container">
+            <img src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/video-frame.jpg"
+                height="400px">
+        </div>
+
+        <div style="display: flex;flex-direction: row;justify-content: space-around;padding: 30px;">
+
+            <div class="orange">
+                <div class="number">
+                    34
+                </div>
+                <div class="info">
+                    Buldings Finished Now
+                </div>
+            </div>
+
+            <div class="orange">
+                <div class="number">
+                    12
+                </div>
+                <div class="info">
+                    Years Experience
+                </div>
+            </div>
+
+            <div class="orange">
+                <div class="number">
+                    24
+                </div>
+                <div class="info">
+                    Awwards Won 2023
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex;flex-direction: row;justify-content: space-around;">
+            <div class="round">
+            </div>
+            <div class="round" style="left: 80px;">
+            </div>
+            <div class="round" style="left: 60px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- page 4 -->
+    <div class="whitesmoke" style="padding-top: 100px;">
+        <div style="width: 800px;">
+            <div class="font">
+                BEST DEAL
+            </div>
+            <div class="black-font" style="width: 600px;">
+                Find Your Best Deal Right Now!
+            </div>
+        </div>
+
+        <div class="button">
+            <button type="button">Appartment</button>
+            <button type="button">Villa House</button>
+            <button type="button">PentJouse</button>
+        </div>
+
+        <div style="display: flex;width: 100%;justify-content: space-between;padding-top: 100px;align-items: center;">
+            <div class="white"
+                style="height: 300px;width: 280px;padding: 30px;background-color: whitesmoke; flex-direction: column;gap: 40px;">
+                <div class="whitesmoke-content">
+                    <div class="grey">
+                        Total Flat Space
+                    </div>
+                    <div class="black">
+                        185 m2
+                    </div>
+                </div>
+
+                <div class="whitesmoke-content">
+                    <div class="grey">
+                        Floor number
+                    </div>
+                    <div class="black">
+                        26th
+                    </div>
+                </div>
+
+                <div class="whitesmoke-content">
+                    <div class="grey">
+                        Number of rooms
+                    </div>
+                    <div class="black">
+                        4
+                    </div>
+                </div>
+
+                <div class="whitesmoke-content">
+                    <div class="grey">
+                        Parking Available
+                    </div>
+                    <div class="black">
+                        Yes
+                    </div>
+                </div>
+
+                <div class="whitesmoke-content">
+                    <div class="grey">
+                        Payment Process
+                    </div>
+                    <div class="black">
+                        Bank
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;justify-content: center;">
+                <img src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/home-decor-advice/design-and-style/modern-and-simplistic-scandinavian-living-room-ideas-for-your-home/Title-scandinavian-living-room-design.jpg"
+                    height="400px;">
+            </div>
+
+            <div style="display: flex;flex-direction: column ;">
+                <div style="font-size:medium;font-weight: bold;">
+                    Extra Info About Property
+                </div>
+                <br>
+                <div style="display: flex;width: 240px;font-size:small;">
+                    <br>
+                    <div style="line-height: 25px;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum quisquam culpa id qui
+                        maiores
+                        voluptatibus neque eligendi a quasi, possimus fugiat vel nemo explicabo quod ea tempora quia
+                        corporis?
+                        <br><br>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur deleniti illum eum
+                        commodi
+                        <br><br>
+                        <div class="nav" style="width: 200px;">
+                            <a href="##" class="alink"><i class="material-icons">tour</i>Sadual a visit</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- page 5 -->
+    <div style="display: flex;flex-direction: column;align-items: center; padding-top: 50px; justify-content: center;">
+        <div style="display: flex;flex-direction: column;gap: 20px;">
+            <div class="font" style="justify-content: center;">
+                PROPERTIES
+            </div>
+            <div class="black-font" style="width: 350px; text-align: center;font-size:xx-large;">
+                We Provide The Best Property You Like
+            </div>
+        </div>
+
+        <!-- images -->
+        <div
+            style="display: flex;flex-direction: row;width: 100%;justify-content:space-between;padding-left: 50px;padding-top: 50px;">
+            <div class="whitesmoke-img" style="width: 420px;">
+                <div style="display: flex;flex-direction: column;;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80"
+                            height="280px;">
+                    </div>
+
+                    <div
+                        style="display:flex ;flex-direction: row;justify-content: space-between;align-items: center;padding: 30px;">
+                        <div class="orange">
+                            Luxury Vilaa
+                        </div>
+                        <div class="font">
+                            $2.264.000
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction: row;font-weight: bold;padding-left: 30px;">
+                        18 New Street Miami,OR 97219
+                    </div>
+                    <div style="display: flex;flex-direction: column;gap: 10px;padding-left: 30px;">
+                        <div style="display: flex;flex-direction: row;gap: 20px;padding-top: 30px;">
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Bedrooms :
+                                </div>
+                                <div class="black2">
+                                    8
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Bathrooms :
+                                </div>
+                                <div class="black2">
+                                    8
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex;flex-direction: row;gap: 20px;">
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Area :
+                                </div>
+                                <div class="black2">
+                                    545m2
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Floor :
+                                </div>
+                                <div class="black2">
+                                    3
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Parking :
+                                </div>
+                                <div class="black2">
+                                    6 spots
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="nav" style="display: flex;justify-content: center;align-items: center;">
+                            <a href="##" class="alink"
+                                style="width: 150px;justify-content: center;display: flex;">Schedual a visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="whitesmoke-img">
+                <div style="display: flex;flex-direction: column;">
+                    <img src="https://i.pinimg.com/736x/56/9d/b6/569db659b14ae22169f75f796083548b.jpg" height="280px;">
+                    <div
+                        style="display:flex ;flex-direction: row;justify-content: space-between;align-items: center;padding: 30px;">
+                        <div class="orange">
+                            Luxury Vilaa
+                        </div>
+                        <div class="font">
+                            $1.180.000
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction: row;font-weight: bold;padding-left: 30px;">
+                        54 Mid Street Florida,OR 27001
+                    </div>
+                    <div style="display: flex;flex-direction: column;gap: 10px;padding-left: 30px;">
+                        <div style="display: flex;flex-direction: row;gap: 20px;padding-top: 30px;">
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Bedrooms :
+                                </div>
+                                <div class="black2">
+                                    6
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Bathrooms :
+                                </div>
+                                <div class="black2">
+                                    5
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex;flex-direction: row;gap: 20px;">
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Area :
+                                </div>
+                                <div class="black2">
+                                    450m2
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Floor :
+                                </div>
+                                <div class="black2">
+                                    3
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Parking :
+                                </div>
+                                <div class="black2">
+                                    8 spots
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="nav" style="display: flex;justify-content: center;align-items: center;">
+                            <a href="##" class="alink"
+                                style="width: 150px;justify-content: center;display: flex;">Schedual a visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="whitesmoke-img" style="width: 420px;">
+                <div style="display: flex;flex-direction: column;">
+                    <img src="https://www.keyrealestates.com/cms/wp-content/uploads/2018/10/marbella-luxury-villas-for-sale-1024x683.jpg"
+                        height="280px">
+                    <div
+                        style="display:flex ;flex-direction: row;justify-content: space-between;align-items: center;padding: 30px;">
+                        <div class="orange">
+                            Luxury Vilaa
+                        </div>
+                        <div class="font">
+                            $1.460.000
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction: row;font-weight: bold;padding-left: 30px;">
+                        26 Old Street Miami,OR 38540
+                    </div>
+                    <div style="display: flex;flex-direction: column;gap: 10px;padding-left: 30px;">
+                        <div style="display: flex;flex-direction: row;gap: 20px;padding-top: 30px;">
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Bedrooms :
+                                </div>
+                                <div class="black2">
+                                    5
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Bathrooms :
+                                </div>
+                                <div class="black2">
+                                    4
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex;flex-direction: row;gap: 20px;">
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Area :
+                                </div>
+                                <div class="black2">
+                                    225m2
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Floor :
+                                </div>
+                                <div class="black2">
+                                    3
+                                </div>
+                            </div>
+
+                            <div style="display: flex;flex-direction: row;">
+                                <div class="grey2">
+                                    Parking :
+                                </div>
+                                <div class="black2">
+                                    10 spots
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="nav" style="display: flex;justify-content: center;align-items: center;">
+                            <a href="##" class="alink"
+                                style="width: 150px;justify-content: center;display: flex;">Schedual a visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- page 6 -->
+    <div style="display: flex;flex-direction: column;gap:0px;">
+        <div>
+            <div class="font"
+                style="display: flex;position: relative;justify-content: center;bottom: -100px ;font-size: smaller;">
+                VIDEO VIEW
+            </div>
+            <div class="black-font"
+                style="display: flex;color: black;position: relative;justify-content: center;bottom: -120px;font-size:x-large;">
+                Get Closer View &<br>Different Feeling
+            </div>
+        </div>
+
+        <div class="video2">
+        </div>
+
+        <div style="display: flex;flex-direction: row;justify-content: space-around;">
+            <div class="image-container" style="padding-left: 100px;bottom: 130px;justify-content: flex-start;">
+                <img src="https://i0.wp.com/www.carplaylife.com/wp-content/uploads/Google-Maps-Night-Guidance.png?fit=784%2C464&ssl=1"
+                    height="400px">
+            </div>
+            <div class="white"
+                style="display: flex; flex-direction: column;height: 500px;width: 400px;border-radius: 10px;position: relative;bottom: 130px;">
+                <div class="label">
+                    <label for="name" id="nm">Full Name</label>
+                    <input type="text" id="nm" name="nm" placeholder="Your Name...">
+                </div>
+
+                <div class="label">
+                    <label for="email" id="mail">Email Address</label>
+                    <input type="email" id="mail" name="mail" placeholder="Your E-mail...">
+                </div>
+
+                <div class="label">
+                    <label for="sub" id="sub">Subject</label>
+                    <input type="text" id="sub" name="sub" placeholder="Subject...">
+                </div>
+
+                <div class="label">
+                    <label for="msg" id="msg">Message</label>
+                    <textarea name="msg" id="msg" placeholder="Your Message..."
+                        style="height: 80px;padding-top: 10px;"></textarea>
+                </div>
+
+                <div class="label">
+                    <button type="submit">
+                        Send Message
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div style="display: flex;flex-direction: row;padding:40px 200px;position: relative;gap: 50px;    bottom: 250px;">
+
+        <div class="footer">
+            <i class="material-icons" style="font-size:40px;">phone_in_talk</i>
+            <div style="display: flex;flex-direction:column;">
+                <div class="black" style="font-size:small;">
+                    010-020-0340
+                 </div>
+                 <div class="grey" style="font-weight: 100;">
+                     Phone Number
+                 </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <i class="material-icons" style="font-size:50px;"> mail</i>
+            <div style="display: flex;flex-direction:column;">
+                <div class="black" style="font-size:small;">
+                    info@villa.co
+                 </div>
+                 <div class="grey" style="font-weight: 100;">
+                     Business Email
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
